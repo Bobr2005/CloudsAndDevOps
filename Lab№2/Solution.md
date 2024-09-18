@@ -12,8 +12,9 @@
 Для приготовления "плохого" Dockerfile'а нам понадобится:
 1. Создать директорию и зайти в неё, где мы и будем работать. Для этого на потребуется:
 
-   **mkdir bad-docker-file
-   cd bad-docker-file**
+   **mkdir bad-docker-file**
+
+   **cd bad-docker-file**
 3. Далее создаём файл requirements.txt, добавляем в него
    Flask==2.1.2
    Werkzeug==2.1.2
