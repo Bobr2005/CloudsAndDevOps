@@ -16,12 +16,14 @@
 
    **cd bad-docker-file**
 3. Далее создаём файл requirements.txt, добавляем в него
-   Flask==2.1.2
-   Werkzeug==2.1.2
+
+   **Flask==2.1.2**
+
+  **Werkzeug==2.1.2**
 , потому что мы сделаем простенькое веб-приложение на Python
 ![image](https://github.com/user-attachments/assets/e0076ef5-54f1-4126-bcbb-9ac6934cbb45)
-4. Создаём папку src в папке bad-docker-file, в ней создаём main.py, в файл вставляем следующий код:
-   from flask import Flask
+5. Создаём папку src в папке bad-docker-file, в ней создаём main.py, в файл вставляем следующий код:
+   **from flask import Flask**
 
   app = Flask(__name__)
 
