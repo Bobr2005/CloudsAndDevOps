@@ -19,18 +19,19 @@
 
    **Flask==2.1.2**
 
-  **Werkzeug==2.1.2**
+   **Werkzeug==2.1.2**
+
 , потому что мы сделаем простенькое веб-приложение на Python
 5. Создаём папку src в папке bad-docker-file, в ней создаём main.py, в файл вставляем следующий код:
-   **from flask import Flask**
+  **from flask import Flask**
 
-  app = Flask(__name__)
+  **app = Flask(__name__)**
 
-  @app.route('/')
-  def hello():
-    return "Hello, World!"
+  **@app.route('/')**
+  **def hello():**
+    **return "Hello, World!"**
 
-  app.run(host='0.0.0.0')
+  **app.run(host='0.0.0.0')**
 
 5. Теперь самое интересное, ведь от следующего шага зависит будущее нашего блюда, ведь если в него добавить что-то лишнее или наоборот пожадничать ингридиентами, то мы останемся недовольными своим трудом. Вот рецепт Dockerfile'a, только тсс-ссс:
   FROM ubuntu:latest
