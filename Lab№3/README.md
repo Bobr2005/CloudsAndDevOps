@@ -118,6 +118,17 @@ jobs:
 
 5. Поставили таймер на выполнение тестов
 
+P.S.: workflow "плохих" и "хороших" практик соответственно:
+
+1.
+
+![image](https://github.com/user-attachments/assets/b26a935c-34e1-415d-844c-b7c60a09f558)
+
+2.
+
+![image](https://github.com/user-attachments/assets/e829b00d-1d65-4ecb-9e41-bca94e1ed193)
+
+Тесты проводились в приватном репозитории.
 
 # That's all!
 
