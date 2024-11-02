@@ -127,6 +127,7 @@ P.S.: тесты workflow "плохих" и "хороших" практик со
 
 
 2.
+![image](https://github.com/user-attachments/assets/f20e3a3e-712a-4252-afbd-57cb3a7495ec)
 
 ![image](https://github.com/user-attachments/assets/e829b00d-1d65-4ecb-9e41-bca94e1ed193)
 
