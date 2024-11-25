@@ -76,7 +76,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout code
@@ -86,6 +86,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ env.NPM_CACHE_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
         run: npm install
@@ -117,6 +125,10 @@ jobs:
 4. Больше не используем **sudo**
 
 5. Поставили таймер на выполнение тестов
+
+6. Установка npm зависимостей закэширована
+
+7. Используется конкретная версия среды (OS), которая исполняет pipeline
 
 P.S.: тесты workflow "плохих" и "хороших" практик соответственно:
 
