@@ -134,8 +134,8 @@ P.S.: тесты workflow "плохих" и "хороших" практик со
 
 1.
 
-![image](https://github.com/user-attachments/assets/b26a935c-34e1-415d-844c-b7c60a09f558)
-![image](https://github.com/user-attachments/assets/d5f88b09-76ec-4f3f-94ff-bb0bf99891f2)
+![image](https://github.com/user-attachments/assets/76b84fed-1dc2-4389-8fa5-afd05e05d4e4)
+![image](https://github.com/user-attachments/assets/a0123a24-dd33-43f2-9941-8e8cf0886799)
 
 
 2.
@@ -144,7 +144,7 @@ P.S.: тесты workflow "плохих" и "хороших" практик со
 ![image](https://github.com/user-attachments/assets/e829b00d-1d65-4ecb-9e41-bca94e1ed193)
 ![image](https://github.com/user-attachments/assets/f20e3a3e-712a-4252-afbd-57cb3a7495ec)
 
-Тесты проводились в приватном репозитории.
+Тесты проводились в приватном репозитории. В данном случае на скринах отличается время установки запвисимостей, т.к. ранее это уже проводилось, а основное изменение на скрине - кеширование. 
 
 # That's all!
 
