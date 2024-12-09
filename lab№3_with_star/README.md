@@ -30,31 +30,24 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Install Doppler CLI
-        run: |
-          curl -sSfL https://cli.doppler.com/install.sh | sudo sh
-
-      - name: Authenticate with Doppler
-        env:
-          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
-        run: |
-          doppler setup --project ci-cd-study --config dev_personal
+      - name: Setup Doppler and Fetch Secrets
+        uses: dopplerhq/cli-action@v1
+        with:
+          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
 
       - name: Use secrets
-        env:
-          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
         run: |
-          doppler run -- echo "Здесь могла бы быть ваша реклама"
-          doppler run -- echo "BOBRINA=$BOBRINA"
-          doppler run -- echo "ANIRBOB=$ANIRBOB"
+          echo "Здесь могла бы быть ваша реклама"
+          echo "BOBRINA=$BOBRINA"
+          echo "ANIRBOB=$ANIRBOB"
 ```
 
-Здесь нужно обратить внимание на установку Doppler CLI, это нужно для получения секретов, аутентификацию в Doppler, устанавливается переменная окружения DOPPLER_TOKEN, в неё передаётся код секрета, который ранее был скопирован и вставлен, а doppler setup связывает текущую сессию с проектом ci-cd-study и конфигурацией dev_personal. Далее в разделе использование секретов они из Doppler автоматически экспортированы как переменные окружения, ну и выводит имена секретов с их значениями (на самом деле нет, видимо из соображений безопасности)
+Здесь нужно обратить внимание на исползование Doppler CLI, это нужно для получения секретов, аутентификацию в Doppler, устанавливается переменная окружения DOPPLER_TOKEN, в неё передаётся код секрета, который ранее был скопирован и вставлен. Далее в разделе использование секретов они из Doppler автоматически экспортированы как переменные окружения, ну и выводит имена секретов с их значениями (на самом деле нет, видимо из соображений безопасности)
 
 Почему данный способ красивый? Сам по себе сервис достаточно удобный, позволяет управление из терминала, а работа с секретами относительно проста. 
 
