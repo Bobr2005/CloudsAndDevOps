@@ -39,8 +39,12 @@ jobs:
         uses: dopplerhq/cli-action@v1
         with:
           doppler-token: ${{ secrets.DOPPLER_TOKEN }}
+          mount-secrets: true 
 
       - name: Use secrets
+        env:
+          BOBRINA: ${{ env.BOBRINA }}
+          ANIRBOB: ${{ env.ANIRBOB }}
         run: |
           echo "Здесь могла бы быть ваша реклама"
           echo "BOBRINA=$BOBRINA"
