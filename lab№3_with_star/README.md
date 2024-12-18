@@ -30,28 +30,23 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Doppler and Fetch Secrets
+      - name: Install Doppler CLI
         uses: dopplerhq/cli-action@v1
-        with:
-          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
-          mount-secrets: true 
 
-      - name: Use secrets
+      - name: Fetch secrets using Doppler
         env:
-          BOBRINA: ${{ env.BOBRINA }}
-          ANIRBOB: ${{ env.ANIRBOB }}
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
         run: |
-          echo "Здесь могла бы быть ваша реклама"
-          echo "BOBRINA=$BOBRINA"
-          echo "ANIRBOB=$ANIRBOB"
+          doppler run -- echo "Здесь могла бы быть ваша реклама" && \
+          doppler run -- printenv | grep -E "BOBRINA|ANIRBOB"
 ```
 
-Здесь нужно обратить внимание на исползование Doppler CLI, это нужно для получения секретов, аутентификацию в Doppler, устанавливается переменная окружения DOPPLER_TOKEN, в неё передаётся код секрета, который ранее был скопирован и вставлен. Далее в разделе использование секретов они из Doppler автоматически экспортированы как переменные окружения, ну и выводит имена секретов с их значениями (на самом деле нет, видимо из соображений безопасности)
+Здесь нужно обратить внимание на исползование Doppler CLI, это нужно для получения секретов, аутентификацию в Doppler, устанавливается переменная окружения DOPPLER_TOKEN, в неё передаётся код секрета, который ранее был скопирован и вставлен. Далее в разделе использование секретов они из Doppler автоматически экспортированы как переменные окружения, ну и выводит имена секретов с их значениями 
 
 Почему данный способ красивый? Сам по себе сервис достаточно удобный, позволяет управление из терминала, а работа с секретами относительно проста. 
 
@@ -59,4 +54,4 @@ jobs:
 
 Лог выполнения:
 
-https://github.com/Bobr2005/testWorkflows/actions/runs/12294721678
+https://github.com/Bobr2005/testWorkflows/actions/runs/12395979142/job/34602941085
