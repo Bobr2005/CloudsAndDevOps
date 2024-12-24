@@ -1,6 +1,6 @@
 # Clouds and DevOps
 
-## Все выполненные лабораторные для групповой работы нашей командой "Здесь могла бы быть ваша реклама"
+## Все выполненные лабораторные для групповой работы нашей командой "Здесь могла бы быть ваша реклама":
 
 ### [Облачная лаба AWS](https://github.com/Alexis416/Clouds-DevOps/tree/main/AWS-Lab) BY [Alexis416](https://github.com/Alexis416/Clouds-DevOps)
 
@@ -15,4 +15,9 @@
 ### [Лабораторная работа №3 DevOps без звёздочки](https://github.com/Bobr2005/CloudsAndDevOps/blob/main/Lab%E2%84%963/README.md)
 
 ### [Лабораторная работа №3 DevOps со звёздочкой](https://github.com/Bobr2005/CloudsAndDevOps/blob/main/lab%E2%84%963_with_star/README.md)
+
+## Задание для самостоятельной работы:
+
+## [Облачная теория](https://github.com/Just-ChillGuy/CloudsAndDevOps/blob/main/Cloud%20Theory/README.md)
+
 
