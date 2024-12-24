@@ -1,6 +1,6 @@
 # Clouds and DevOps
 
-## Здесь будут ссылки на лабораторные курса Облачные технологии и услуги
+## Все выполненные лабораторные для групповой работы нашей командой "Здесь могла бы быть ваша реклама"
 
 ### [Облачная лаба AWS](https://github.com/Alexis416/Clouds-DevOps/tree/main/AWS-Lab) BY [Alexis416](https://github.com/Alexis416/Clouds-DevOps)
 
